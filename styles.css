@@ -153,41 +153,6 @@ body, html {
 
 
 
-.balloon-game {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.balloon-counter {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.balloon {
-    width: 100px;
-    height: 150px;
-    background-color: red;
-    border-radius: 50%;
-    cursor: pointer;
-    position: relative;
-    animation: float 2s ease-in-out infinite;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(10px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(10px);
-    }
-}
-
 .celebration {
     display: flex;
     flex-direction: column;
@@ -228,6 +193,124 @@ body, html {
     display: none;
 }
 
+body {
+    margin: 0;
+}
+
+
+.balloon-counter-card {
+    width: 150px;
+    height: 100px;
+    background-color: #ffb6c1; /* Cor do card */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fixado no topo */
+    top: 10px; /* Distância do topo */
+    left: 50%; /* Centralizado horizontalmente */
+    transform: translateX(-50%); /* Garante o centro exato */
+    text-align: center;
+    animation: fadeIn 1s ease-in-out; /* Animação de entrada */
+    z-index: 10; /* Certifica-se de que o contador está acima de tudo */
+}
+
+
+.balloon-counter-number {
+    font-size: 36px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes balloonFloat { /* Animação exclusiva para balões */
+    from {
+        transform: translateY(100%); /* Começa debaixo da tela */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(-200%); /* Sobe até metade da tela */
+        opacity: 1;
+    }
+}
+
+.balloon {
+    height: 125px;
+    width: 105px;
+    border-radius: 75% 75% 70% 70%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    animation: balloonFloat 1s linear forwards; /* Animação finaliza e mantém o estado */
+}
+
+.balloon:before {
+    content: "";
+    height: 75px;
+    width: 1px;
+    background-color: #b44d7d;
+    display: block;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.balloon:after {
+    content: "▲";
+    text-align: center;
+    display: block;
+    position: absolute;
+    color: inherit;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+
+
+
+
+.pop-animation {
+    animation: pop 0.5s ease-out forwards;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+
 
 .heart {
     position: absolute;
@@ -236,11 +319,11 @@ body, html {
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffb6c1"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') no-repeat center center;
     background-size: contain;
     opacity: 0;
-    animation: float 4s ease-in-out infinite;
+    animation: heartFloat 4s ease-in-out infinite;
     animation-delay: 0s;
 }
 
-@keyframes float {
+@keyframes heartFloat {
     0%, 100% {
         transform: translateY(0);
     }
@@ -249,16 +332,6 @@ body, html {
     }
 }
 
-
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
 
 @media (max-width: 480px) {
     .card {
