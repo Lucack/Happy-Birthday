@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainCard = document.querySelector('.card');
     const giftCard = document.querySelector('.gift-card');
 
-    const years = 1;
+    const years = 22;
 
     const retrospective = document.querySelector('.retrospective');
     const retrospectiveCard = document.querySelector('.retrospective-card');
@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     const retrospectiveData = [
-        { title: "First Memory", image: "https://via.placeholder.com/800", icon: "🎉" },
-        { title: "A Special Day", image: "https://via.placeholder.com/800", icon: "🌟" },
-        { title: "Unforgettable Moment", image: "https://via.placeholder.com/800", icon: "🎁" },
+        // { title: "First Memory", image: "https://via.placeholder.com/800", icon: "🎉" },
+        // { title: "A Special Day", image: "https://via.placeholder.com/800", icon: "🌟" },
+        // { title: "Unforgettable Moment", image: "https://via.placeholder.com/800", icon: "🎁" },
     ];
 
     // Transição para a tela de retrospectiva ao clicar em "Não clique aqui! 😉"
