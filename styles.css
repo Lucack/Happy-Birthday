@@ -6,6 +6,8 @@ body, html {
 }
 
 .container {
+    padding-right: 10%;
+    padding-left: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,12 +28,12 @@ body, html {
     height: 100%;
     backface-visibility: hidden;
     transition: transform 1s;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-front {
     background-color: #ffb6c1;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,10 +48,19 @@ body, html {
 
 .card-inside {
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transform: rotateY(-180deg);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card.open .card-front {
+    transform: rotateY(180deg);
+}
+
+.card.open .card-inside {
+    transform: rotateY(0);
 }
 
 .content {
@@ -59,14 +70,6 @@ body, html {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s, transform 0.5s;
-}
-
-.card.open .card-front {
-    transform: rotateY(180deg);
-}
-
-.card.open .card-inside {
-    transform: rotateY(0);
 }
 
 .card.open .content {
@@ -85,6 +88,147 @@ body, html {
     z-index: 1000;
 }
 
+.intro-card {
+    width: 500px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffb6c1; /* Cor do card existente */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    animation: fadeInOut 1s ease-in-out;
+}
+
+.intro-content h1 {
+    color: white;
+    font-size: 24px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+.recado-button {
+    background-color: white;
+    color: #ffb6c1;
+    border: 2px solid #ffb6c1;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.recado-button:hover {
+    background-color: #ffb6c1;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+.balloon-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.balloon-counter {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.balloon {
+    width: 100px;
+    height: 150px;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+.celebration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.celebration-message {
+    font-size: 36px;
+    color: #ff1493;
+    margin-bottom: 20px;
+}
+
+.age {
+    font-size: 24px;
+    color: #ff1493;
+    margin-bottom: 40px;
+}
+
+.gift {
+    font-size: 48px;
+    cursor: pointer;
+    animation: pop 1s ease-in-out infinite;
+}
+
+@keyframes pop {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+
 .heart {
     position: absolute;
     width: 20px;
@@ -93,7 +237,19 @@ body, html {
     background-size: contain;
     opacity: 0;
     animation: float 4s ease-in-out infinite;
+    animation-delay: 0s;
 }
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
 
 @keyframes float {
     0%, 100% {
@@ -111,67 +267,6 @@ body, html {
     }
 }
 
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fff0f5;
-}
-
-.container {
-    padding-right: 10%;
-    padding-left: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.card {
-    
-    
-    width: 500px;
-    height: 700px;
-    position: relative;
-    perspective: 1500px;
-    cursor: pointer;
-}
-
-.card-front, .card-inside {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    transition: transform 1s;
-}
-
-.card-front {
-    background-color: #ffb6c1;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    color: white;
-}
-
-.card-front::before {
-    content: "Click to open";
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.card-inside {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transform: rotateY(-180deg);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .do-not-click {
     display: none;
     margin-top: 20px;
@@ -185,14 +280,6 @@ body, html {
 
 .do-not-click:hover {
     background-color: #ff8aa1;
-}
-
-.card.open .card-front {
-    transform: rotateY(180deg);
-}
-
-.card.open .card-inside {
-    transform: rotateY(0);
 }
 
 .retrospective {

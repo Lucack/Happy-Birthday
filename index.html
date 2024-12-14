@@ -7,8 +7,34 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    
     <div class="container">
-        <div class="card">
+        <!-- Tela inicial -->
+        <div class="intro-card">
+            <div class="intro-content">
+                <h1>Oops! Parece que tem um recado para você! 👀</h1>
+                <button class="recado-button hidden">Como assim um recado?</button>
+            </div>
+        </div>
+    
+        <!-- Tela dos balões -->
+        <div class="balloon-game hidden">
+            <div class="balloon-area">
+                <p class="balloon-counter">Balloons popped: 0</p>
+                <div class="balloon"></div>
+            </div>
+        </div>
+    
+        <!-- Tela de confete e celebração -->
+        <div class="celebration hidden">
+            <h1 class="celebration-message">Happy Birthday!! 🥳🥰</h1>
+            <p class="age">22 years</p>
+            <div class="gift hidden">🎁 Click me!</div>
+        </div>
+    
+        <!-- Tela final -->
+        <div class="card hidden">
             <div class="card-front"></div>
             <div class="card-inside">
                 <div class="content">
@@ -20,6 +46,8 @@
             </div>
         </div>
     </div>
+    
+    
     <div class="retrospective hidden">
         <div class="retrospective-card">
             <h2 class="retro-title"></h2>
@@ -28,6 +56,7 @@
             <button class="next">Next</button>
         </div>
     </div>
+    <div class="hearts"></div>
     <script src="script.js"></script>
 </body>
 </html>
