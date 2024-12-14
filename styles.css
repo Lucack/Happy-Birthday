@@ -14,8 +14,8 @@ body, html {
 }
 
 .card {
-    width: 600px; /* Aumenta a largura do cartão */
-    height: 800px; /* Aumenta a altura do cartão */
+    width: 600px; 
+    height: 700px; 
     display: flex;
     justify-content: center;
     align-items: center;
