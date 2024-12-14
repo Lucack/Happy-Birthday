@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
          { title: "Forever Friends", image: "IMG-20241214-WA0008.jpg", icon: "✨" },
          { title: "A Special Memory", image: "WhatsApp Image 2024-12-14 at 17.41.01_9ab72c00.jpg", icon: "💫" },
          { title: "Celebration", image: "IMG-20241214-WA0010.jpg", icon: "🥳" },
-         { title: "Forever Friends", image: "WhatsApp Image 2024-12-14 at 17.42.06_4f9dc39f.jpg", icon: "🌟" },
+        
          { title: "Smile :)", image: "WhatsApp Image 2024-12-14 at 17.42.42_bcb16fb3.jpg", icon: "🎉" },
 
          // { title: "Unforgettable Moment", image: "https://via.placeholder.com/800", icon: "🎁" },
