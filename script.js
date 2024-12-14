@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainCard = document.querySelector('.card');
     const giftCard = document.querySelector('.gift-card');
 
-    const years = 22;
+    const years = 2;// muda dps vou nada
 
     const retrospective = document.querySelector('.retrospective');
     const retrospectiveCard = document.querySelector('.retrospective-card');
@@ -26,9 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     const retrospectiveData = [
-        // { title: "First Memory", image: "https://via.placeholder.com/800", icon: "🎉" },
-        // { title: "A Special Day", image: "https://via.placeholder.com/800", icon: "🌟" },
-        // { title: "Unforgettable Moment", image: "https://via.placeholder.com/800", icon: "🎁" },
+         { title: "Celebration Time", image: "IMG-20240511-WA0097.jpg", icon: "🎉" },
+         { title: "A Special Day", image: "IMG-20241214-WA0009.jpg", icon: "🥳" },
+         { title: "Happy Moments", image: "IMG-20241214-WA0006.jpg", icon: "🌟" },
+         { title: "Smile Always", image: "IMG-20241214-WA0007.jpg", icon: "🎂" },
+         { title: "Forever Friends", image: "IMG-20241214-WA0008.jpg", icon: "✨" },
+         { title: "A Special Memory", image: "WhatsApp Image 2024-12-14 at 17.41.01_9ab72c00.jpg", icon: "💫" },
+         { title: "Celebration", image: "IMG-20241214-WA0010.jpg", icon: "🥳" },
+         { title: "Forever Friends", image: "WhatsApp Image 2024-12-14 at 17.42.06_4f9dc39f.jpg", icon: "🌟" },
+         { title: "Smile :)", image: "WhatsApp Image 2024-12-14 at 17.42.42_bcb16fb3.jpg", icon: "🎉" },
+
+         // { title: "Unforgettable Moment", image: "https://via.placeholder.com/800", icon: "🎁" },
     ];
 
     // Transição para a tela de retrospectiva ao clicar em "Não clique aqui! 😉"
