@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Birthday Card</title>
+    <title>Supresa</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    
     <div class="container">
         <!-- Tela inicial -->
         <div class="intro-card">
             <div class="intro-content">
-                <h1>Oops! Parece que tem um recado para você! 👀</h1>
-                <button class="recado-button hidden">Como assim um recado?</button>
+                <h1>🎉 Opa! Tem uma surpresa para você! 👀</h1>
+                <button class="recado-button hidden">Me conta o que é!</button>
             </div>
         </div>
-    
+
         <!-- Tela dos balões -->
         <div class="balloon-game hidden">
             <div class="balloon-counter-card hidden">
@@ -25,40 +26,49 @@
             </div>
             <div id="balloon-container"></div>
         </div>
-        
-        
-    
+
         <!-- Tela de confete e celebração -->
         <div class="celebration hidden">
-            <h1 class="celebration-message">Happy Birthday!! 🥳🥰</h1>
-            <p class="age">22 years</p>
-            <div class="gift hidden">🎁 Click me!</div>
+            <h1 class="celebration-message">📆</h1>
+            <p class="age"></p>
+            <div class="message hidden">✉️ Chegou uma mensagem!</div>
         </div>
-    
+
         <!-- Tela final -->
         <div class="card hidden">
             <div class="card-front"></div>
             <div class="card-inside">
                 <div class="content">
-                    <h1>Happy Birthday!</h1>
-                    <p>Wishing you a day filled with joy, laughter, and unforgettable moments.</p>
-                    <p>May this year bring you endless happiness and success!</p>
+                    <h1>Feliz Aniversário! 🎈</h1>
+                    <p>Que o seu dia seja cheio de alegria, risadas e momentos inesquecíveis! 🥰</p>
+                    <p>Que este novo ano traga muita felicidade e conquistas incríveis! 🌟</p>
                 </div>
-                <button class="do-not-click">Don't Click Here</button>
+                <button class="do-not-click">Não clique aqui! 😉</button>
             </div>
         </div>
-    </div>
-    
-    
-    <div class="retrospective hidden">
-        <div class="retrospective-card">
-            <h2 class="retro-title"></h2>
-            <img class="retro-image" alt="Retrospective Image">
-            <i class="retro-icon"></i>
-            <button class="next">Next</button>
+
+
+        <!-- Tela de retrospectiva -->
+        <div class="retrospective hidden">
+            <div class="retrospective-card">
+                <h2 class="retro-title"></h2>
+                <img class="retro-image" alt="Imagem da retrospectiva">
+                <i class="retro-icon"></i>
+                <button class="next">Próxima memória</button>
+            </div>
         </div>
-    </div>
-    <div class="hearts"></div>
-    <script src="script.js"></script>
+
+        <!-- Tela de Presente em Breve -->
+        <div class="gift-card hidden">
+            <div class="gift-message">
+                <h1>🎁 Presente em breve!</h1>
+                <p>Segunda-feira tem uma surpresa especial chegando para você! Fique de olho! 😉</p>
+            </div>
+        </div>
+
+
+        <div class="hearts"></div>
+        <script src="script.js"></script>
 </body>
+
 </html>
