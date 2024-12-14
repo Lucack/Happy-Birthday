@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainCard = document.querySelector('.card');
     const giftCard = document.querySelector('.gift-card');
 
-    const years = 2;// muda dps vou nada
+    const years = 22;// muda dps vou nada
 
     const retrospective = document.querySelector('.retrospective');
     const retrospectiveCard = document.querySelector('.retrospective-card');
